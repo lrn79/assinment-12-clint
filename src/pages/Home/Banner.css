@@ -1,0 +1,9 @@
+.curv {
+    height: 190px;
+    background-color: #84cc39;
+    clip-path: ellipse(66% 100% at 34% 100%);
+}
+
+.redious {
+    border-radius: 30px;
+}
