@@ -1,8 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import PrimaryBtn from '../../../Component/PrimaryBtn';
 
 const Tool = ({ tool }) => {
-    const { name, price, minimum_quantity, Available_quantity, description, img } = tool;
+    const navigate = useNavigate()
+    const { _id, name, price, minimum_quantity, Available_quantity, description, img } = tool;
+    const navigateorderNow = id => {
+        navigate(`orderNow/${id}`)
+    }
+
     return (
         <div>
             <div className="card w-50 bg-base-100 shadow-xl">
@@ -16,7 +22,7 @@ const Tool = ({ tool }) => {
                     <h2 className="card-title">Available quantity :{Available_quantity}</h2>
                     <p>{description}</p>
                     <div className="card-actions">
-                        <PrimaryBtn>Order Now</PrimaryBtn>
+                        <button onClick={() => navigateorderNow(_id)}  ><PrimaryBtn>Order Now</PrimaryBtn></button>
                     </div>
                 </div>
             </div>

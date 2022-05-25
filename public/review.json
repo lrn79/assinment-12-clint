@@ -1,0 +1,20 @@
+[
+    {
+        "name": "amir",
+        "description": "this is an amazing website",
+        "rating": 5,
+        "img": "https://i0.wp.com/newdoorfiji.com/wp-content/uploads/2018/03/profile-img-1.jpg?ssl=1"
+    },
+    {
+        "name": "amir",
+        "description": "this is an amazing website",
+        "rating": 5,
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuGibomxZre1buVNs5x0D1F1iem4Ezda9vT2-S3Ow4Pozpy1slB-hqmaQMSdMkKgWT62A&usqp=CAU"
+    },
+    {
+        "name": "amir",
+        "description": "this is an amazing website",
+        "rating": 5,
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyN7s-bTRAwzOXSM4lOavTSYwPJRePiMZzRw&usqp=CAU"
+    }
+]
