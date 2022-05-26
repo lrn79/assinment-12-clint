@@ -44,8 +44,8 @@ const SignUP = () => {
             return
         }
 
-        createUserWithEmailAndPassword(email, password)
-        console.log(user)
+        createUserWithEmailAndPassword(email, password, userName)
+
     }
     return (
         <div className='mb-20'>
