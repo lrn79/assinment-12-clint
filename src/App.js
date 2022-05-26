@@ -2,10 +2,12 @@ import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
+import AddReview from './pages/AddReview/AddReview';
 import Login from './pages/Authentication/Login';
 import RequreAuth from './pages/Authentication/RequreAuth';
 import SignUP from './pages/Authentication/SignUP';
 import Blogs from './pages/Blogs/Blogs';
+import Dashbord from './pages/Dashboard/Dashbord';
 import Home from './pages/Home/Home';
 import Myprofile from './pages/MyProfile/Myprofile';
 import NotFound from './pages/NotFound';
@@ -25,6 +27,8 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signUp" element={<SignUP></SignUP>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
+        <Route path='/addReview' element={<AddReview></AddReview>}></Route>
+        <Route path='/dashboard' element={<Dashbord></Dashbord>}></Route>
         <Route path='/orderNow/:id' element={<RequreAuth><Order></Order></RequreAuth>}></Route>
       </Routes>
       <Footer></Footer>

@@ -1,10 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import auth from '../../firebase.init';
 import useOrder from '../../hooks/useOrder';
 
 const Order = () => {
     const { id } = useParams();
-    console.log(id)
+    const [user] = useAuthState(auth)
     const [tool] = useOrder(id);
     console.log(tool)
     const { name, _id, img, description, minimum_quantity, Available_quantity } = tool
@@ -26,6 +28,8 @@ const Order = () => {
                         <p className="py-2 text-xl font-bold"><span className='text-4xl'>Available_quantity:</span> {Available_quantity}</p>
                     </div>
                 </div>
+
+
             </div>
         </>
     );
