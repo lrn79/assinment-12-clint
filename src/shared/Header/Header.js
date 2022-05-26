@@ -15,9 +15,7 @@ const Header = () => {
         {
             user && <li className='text-xl bg-white-500 rounded-full  font-bold hover:bg-lime-200 '><Link to="/dashboard">Dashboard</Link></li>
         }
-        {
-            user && <li className='text-xl bg-white-500 rounded-full  font-bold hover:bg-lime-200 '><Link to="/addReview">Add Reviews</Link></li>
-        }
+
         <li className='text-xl bg-white-500 rounded-full  font-bold hover:bg-lime-200 '>{user ? <button className="btn btn-success" onClick={logout} >Sign Out</button> : <Link to="/login">Log in</Link>}</li>
     </>
     return (
@@ -40,6 +38,7 @@ const Header = () => {
                     {menuItems}
                 </ul>
             </div>
+
         </div>
     );
 };

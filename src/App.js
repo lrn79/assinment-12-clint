@@ -8,6 +8,7 @@ import RequreAuth from './pages/Authentication/RequreAuth';
 import SignUP from './pages/Authentication/SignUP';
 import Blogs from './pages/Blogs/Blogs';
 import Dashbord from './pages/Dashboard/Dashbord';
+import Myorders from './pages/Dashboard/Myorders';
 import Home from './pages/Home/Home';
 import Myprofile from './pages/MyProfile/Myprofile';
 import NotFound from './pages/NotFound';
@@ -27,8 +28,11 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signUp" element={<SignUP></SignUP>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
-        <Route path='/addReview' element={<AddReview></AddReview>}></Route>
-        <Route path='/dashboard' element={<Dashbord></Dashbord>}></Route>
+        <Route path='dashboard' element={<RequreAuth> <Dashbord></Dashbord></RequreAuth>}>
+          <Route index element={<Myorders></Myorders>}></Route>
+          <Route path='addReview' element={<AddReview></AddReview>}></Route>
+
+        </Route>
         <Route path='/orderNow/:id' element={<RequreAuth><Order></Order></RequreAuth>}></Route>
       </Routes>
       <Footer></Footer>
