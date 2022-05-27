@@ -13,6 +13,7 @@ import AddProducts from './pages/Dashboard/ManageProduct/AddProducts';
 import ManageProduct from './pages/Dashboard/ManageProduct/ManageProduct';
 import ManageUsers from './pages/Dashboard/ManageUsers';
 import Myorders from './pages/Dashboard/Myorders';
+import Payment from './pages/Dashboard/Payment';
 import Home from './pages/Home/Home';
 import Myprofile from './pages/MyProfile/Myprofile';
 import NotFound from './pages/NotFound';
@@ -34,6 +35,7 @@ function App() {
         <Route path='dashboard' element={<RequreAuth> <Dashbord></Dashbord></RequreAuth>}>
           <Route index element={<Myorders></Myorders>}></Route>
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path="myProfile" element={<Myprofile></Myprofile>}></Route>
           <Route path='users' element={<ManageUsers></ManageUsers>}></Route>
           <Route path='manageProducts' element={<ManageProduct></ManageProduct>}></Route>
