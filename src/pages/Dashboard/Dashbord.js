@@ -29,7 +29,11 @@ const Dashbord = () => {
                         <li className='text-2xl font-bold'><Link to="myProfile">My profile</Link></li>
 
                         {/* <li className='text-2xl font-bold' ><Link to='users'>manage User</Link></li> */}
-                        {admin && <li className='text-2xl font-bold' ><Link to='users'>manage User</Link></li>}
+                        {/* ADMIN */}
+                        {admin && <>
+                            <li className='text-2xl font-bold' ><Link to='users'>manage User</Link></li>
+                            <li className='text-2xl font-bold' ><Link to='manageProducts'>manage Products</Link></li>
+                        </>}
                     </ul>
 
                 </div>
