@@ -9,6 +9,7 @@ import RequreAuth from './pages/Authentication/RequreAuth';
 import SignUP from './pages/Authentication/SignUP';
 import Blogs from './pages/Blogs/Blogs';
 import Dashbord from './pages/Dashboard/Dashbord';
+import AddProducts from './pages/Dashboard/ManageProduct/AddProducts';
 import ManageProduct from './pages/Dashboard/ManageProduct/ManageProduct';
 import ManageUsers from './pages/Dashboard/ManageUsers';
 import Myorders from './pages/Dashboard/Myorders';
@@ -36,6 +37,7 @@ function App() {
           <Route path="myProfile" element={<Myprofile></Myprofile>}></Route>
           <Route path='users' element={<ManageUsers></ManageUsers>}></Route>
           <Route path='manageProducts' element={<ManageProduct></ManageProduct>}></Route>
+          <Route path='manageProducts/addProducts' element={<AddProducts></AddProducts>}></Route>
         </Route>
         <Route path='/orderNow/:id' element={<RequreAuth><Order></Order></RequreAuth>}></Route>
       </Routes>

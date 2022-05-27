@@ -33,6 +33,7 @@ const Dashbord = () => {
                         {admin && <>
                             <li className='text-2xl font-bold' ><Link to='users'>manage User</Link></li>
                             <li className='text-2xl font-bold' ><Link to='manageProducts'>manage Products</Link></li>
+                            {/* <li className='text-2xl font-bold' ><Link to='manageProducts/addProducts'>Add Products</Link></li> */}
                         </>}
                     </ul>
 

@@ -16,8 +16,11 @@ const ManageProduct = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>email</th>
-                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>minimum quantity</th>
+                            <th>Alliable quantity</th>
+                            <th>Add</th>
+                            <th>delete</th>
                         </tr>
                     </thead>
                     <tbody>
