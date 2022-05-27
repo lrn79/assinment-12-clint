@@ -3,9 +3,11 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import Loading from '../../Component/Loading';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import GoogleSignUp from './GoogleSignUp';
 
 const SignUP = () => {
+
     const [userName, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -18,6 +20,7 @@ const SignUP = () => {
         loading,
 
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [token] = useToken(user)
     const handleUserName = e => {
         setUsername(e.target.value)
     }

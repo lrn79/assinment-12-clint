@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Loading from '../../Component/Loading';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import GoogleSignUp from './GoogleSignUp';
 
 const Login = () => {
@@ -17,6 +18,7 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.from?.pathname || '/';
+    const [token] = useToken(user)
     // handle email and pass
     const handleEmail = e => {
         setEmail(e.target.value)

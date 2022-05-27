@@ -32,7 +32,7 @@ const Order = () => {
                 phone: data.phone,
                 address: data.address
             };
-            fetch('http://localhost:5000/order', {
+            fetch(`http://localhost:5000/allOrdered`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
