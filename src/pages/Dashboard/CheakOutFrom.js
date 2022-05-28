@@ -13,7 +13,7 @@ const CheakOutFrom = ({ orders }) => {
     const { name, _id, email, price } = orders;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://murmuring-crag-01369.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -79,7 +79,7 @@ const CheakOutFrom = ({ orders }) => {
                 transactionId: paymentIntent.id
             }
             // fetch
-            fetch(`http://localhost:5000/ordered/${_id}`, {
+            fetch(`https://murmuring-crag-01369.herokuapp.com/ordered/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

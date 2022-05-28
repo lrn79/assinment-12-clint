@@ -3,7 +3,7 @@ import useTools from '../../../hooks/useTools';
 import ManageProductRow from './ManageProductRow';
 
 const ManageProduct = () => {
-    const { tools, setTools, isReload, setIsReload } = useTools('http://localhost:5000/allTools');
+    const { tools, setTools, isReload, setIsReload } = useTools('https://murmuring-crag-01369.herokuapp.com/allTools');
 
     return (
         <div>

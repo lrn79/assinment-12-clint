@@ -4,7 +4,7 @@ import Loading from '../../Component/Loading';
 import UserRow from './UserRow';
 
 const ManageUsers = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user').then(res => res.json()))
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://murmuring-crag-01369.herokuapp.com/user').then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
     }

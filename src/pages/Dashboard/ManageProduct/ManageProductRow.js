@@ -13,7 +13,7 @@ const ManageProductRow = ({ tool, tools, setTools, isReload, setIsReload }) => {
         const confirmPass = window.confirm('Are you sure you want to delete it?');
 
         if (confirmPass) {
-            const url = `http://localhost:5000/deleteTools/${id}`;
+            const url = `https://murmuring-crag-01369.herokuapp.com/deleteTools/${id}`;
             await axios.delete(url)
 
             const remaining = tools.filter(tool => tool._id !== id)

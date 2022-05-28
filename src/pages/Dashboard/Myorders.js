@@ -7,7 +7,7 @@ import auth from '../../firebase.init';
 
 const Myorders = () => {
     const [user] = useAuthState(auth)
-    const { data: order, isLoading, } = useQuery('order', () => fetch(`http://localhost:5000/ordered/${user?.email}`).then(res => res.json())
+    const { data: order, isLoading, } = useQuery('order', () => fetch(`https://murmuring-crag-01369.herokuapp.com/ordered/${user?.email}`).then(res => res.json())
 
     )
     console.log(order)

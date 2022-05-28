@@ -11,7 +11,7 @@ const AddReview = () => {
 
         const review = { name, img, rating, description }
         // send data to the server
-        fetch('http://localhost:5000/addReview', {
+        fetch('https://murmuring-crag-01369.herokuapp.com/addReview', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

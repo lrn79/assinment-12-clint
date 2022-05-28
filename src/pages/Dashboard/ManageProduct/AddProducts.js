@@ -20,7 +20,7 @@ const AddProducts = () => {
         const tools = { name, description, img, price, available_quantity, minimum_quantity, email };
 
         // send data to the server
-        fetch('http://localhost:5000/addTools', {
+        fetch('https://murmuring-crag-01369.herokuapp.com/addTools', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

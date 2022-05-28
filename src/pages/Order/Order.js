@@ -32,7 +32,7 @@ const Order = () => {
                 phone: data.phone,
                 address: data.address
             };
-            fetch(`http://localhost:5000/allOrdered`, {
+            fetch(`https://murmuring-crag-01369.herokuapp.com/allOrdered`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
