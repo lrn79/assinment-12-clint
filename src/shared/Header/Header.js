@@ -11,6 +11,7 @@ const Header = () => {
     };
     const menuItems = <>
         <li className='text-xl font-bold bg-white-500 rounded-full hover:bg-lime-200 '><Link to="/blogs">Blogs</Link></li>
+        <li className='text-xl font-bold bg-white-500 rounded-full hover:bg-lime-200 '><Link to="/portfolio">Portfolio</Link></li>
         {
             user && <li className='text-xl bg-white-500 rounded-full  font-bold hover:bg-lime-200 '><Link to="/dashboard">Dashboard</Link></li>
         }

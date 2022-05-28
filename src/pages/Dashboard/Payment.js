@@ -11,7 +11,7 @@ const Payment = () => {
     const { id } = useParams();
     const url = `http://localhost:5000/allOrdered/${id}`
 
-    const { data: order, isLoading } = useQuery(['ordered', id], () => fetch(url, {
+    const { data: orders, isLoading } = useQuery(['ordered', id], () => fetch(url, {
         method: "GET",
         headers: {
             "content-type": "application/json",
@@ -27,14 +27,14 @@ const Payment = () => {
                 <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
                     <div class="card-body">
                         <p className="text-success font-bold">Hello, </p>
-                        <h2 class="card-title">Please Pay for {order.name}</h2>
-                        <p>Please pay: ${order.price}</p>
+                        <h2 class="card-title">Please Pay for {orders.name}</h2>
+                        <p>Please pay: ${orders.price}</p>
                     </div>
                 </div>
                 <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
                     <div class="card-body">
                         <Elements stripe={stripePromise}>
-                            <CheakOutFrom />
+                            <CheakOutFrom orders={orders} />
                         </Elements>
                     </div>
                 </div>
@@ -42,7 +42,7 @@ const Payment = () => {
         </div>
     );
 };
-
+// 77.7 number video
 export default Payment;
 
 // pk_test_51L1V0ABnDo3eZslJWh9iGP7P1597viXF2yxnTIYcLyHLdPVgOOLWFMoXR2aUPixHdd7gCB4J7M7hJoObyKJat1FB00JsW5bCRB

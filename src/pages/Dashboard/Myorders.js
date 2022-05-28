@@ -7,9 +7,10 @@ import auth from '../../firebase.init';
 
 const Myorders = () => {
     const [user] = useAuthState(auth)
-    const { data: orders, isLoading, } = useQuery('order', () => fetch(`http://localhost:5000/allOrdered/${user?.email}`).then(res => res.json())
+    const { data: order, isLoading, } = useQuery('order', () => fetch(`http://localhost:5000/ordered/${user?.email}`).then(res => res.json())
 
     )
+    console.log(order)
     if (isLoading) {
         return <Loading></Loading>
     }
@@ -28,7 +29,7 @@ const Myorders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) =>
+                            order.map((order, index) =>
                                 <tr>
                                     <th>{index + 1}</th>
                                     <td>{order.name}</td>
