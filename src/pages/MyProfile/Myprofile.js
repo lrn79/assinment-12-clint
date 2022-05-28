@@ -20,7 +20,7 @@ const Myprofile = () => {
                         <div className='mx-20'>
                             <h1 className="text-5xl font-bold">Lets See Your Profile!</h1>
                             <h1 className="text-2xl mt-3 font-bold">Your Id:  {uid}</h1>
-                            <h1 className="text-2xl font-bold">Email:  {email}</h1>
+                            <h1 className="text-2xl mt-3 font-bold">Email:  {email}</h1>
                             <h1 className="text-2xl font-bold">Name : {'' ? displayName : "Can't See name"}</h1>
 
                             <button className="btn btn-primary">Get Started</button>
